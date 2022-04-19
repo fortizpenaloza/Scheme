@@ -7,6 +7,13 @@ Class {
 	#category : #'Scheme-Tests'
 }
 
+{ #category : #running }
+SchemeParserTest >> setUp [
+
+	super setUp.
+	parser := SchemeParser new
+]
+
 { #category : #tests }
 SchemeParserTest >> testParseBoolean [
 

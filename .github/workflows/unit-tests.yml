@@ -15,7 +15,7 @@ jobs:
         with:
           smalltalk-image: ${{ matrix.smalltalk }}
       - name: Load Image and Run Tests
-        run: smalltalkci -s ${{ matrix.smalltalk }} .smalltalkci/.unit-tests.ston
+        run: smalltalkci -s ${{ matrix.smalltalk }} .smalltalkci/unit-tests.ston
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         timeout-minutes: 15
@@ -23,4 +23,3 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           name: ${{matrix.os}}-${{matrix.smalltalk}}
-          token: ${{ secrets.CODECOV_TOKEN }}
